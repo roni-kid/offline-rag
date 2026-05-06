@@ -92,12 +92,8 @@ unless acted upon by an external force.
 
 ---
 
-## Part of the JAR Studios Ebook Series
-
 **"Run AI on Your Own PC"** — full setup guide, model recommendations, and 5 real offline AI workflows.
-
-Available on [Gumroad](https://gumroad.com)
 
 ---
 
-*Built by RoniKid · Computer Engineering · GCTU*
+*Built by RoniKid*
