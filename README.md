@@ -1,7 +1,5 @@
 # 🤖 Offline RAG — Local AI Document Q&A
 
-> The companion code for **"Run AI on Your Own PC"** — the ebook by JAR Studios.
-
 Run AI on your own documents, completely offline. No API keys. No cloud. No subscription.
 
 ---
@@ -9,8 +7,6 @@ Run AI on your own documents, completely offline. No API keys. No cloud. No subs
 ## What This Does
 
 Point it at any PDF (lecture notes, textbooks, past questions) and ask questions in plain English. The script finds the most relevant sections and generates a grounded answer using your local LM Studio model.
-
-This is the exact foundation that [StudyMind](https://github.com/roni-kid/StudyMine) is built on.
 
 ---
 
