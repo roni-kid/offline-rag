@@ -1,5 +1,5 @@
 import requests
-import fitz  # PyMuPDF
+import fitz 
 from sentence_transformers import SentenceTransformer
 import chromadb
 from typing import List, Optional
@@ -8,10 +8,10 @@ from typing import List, Optional
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────
 LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"
-MODEL_NAME = "local-model"  # Placeholder; LM Studio ignores this
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
-CHUNK_SIZE = 500  # words
-TEMPERATURE = 0.7
+MODEL_NAME = "local-model"  # LM Studio would ignore this
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"  
+CHUNK_SIZE = 500  # number of words per chunk
+TEMPERATURE = 0.6 # how less or more deterministic the model should be
 MAX_TOKENS = 500
 TOP_K_RESULTS = 3
 
@@ -79,7 +79,7 @@ def chunk_text(text: str, chunk_size: int = CHUNK_SIZE) -> List[str]:
     return chunks
 
 # ─────────────────────────────────────────────────────────────
-# 3. VECTOR INDEXING & SEARCH (ChromaDB + Sentence Transformers)
+# 3. VECTOR INDEXING & SEARCH 
 # ─────────────────────────────────────────────────────────────
 class DocumentIndex:
     """Simple wrapper around ChromaDB for document embedding and retrieval."""
@@ -134,13 +134,13 @@ def answer_question_from_pdf(pdf_path: str, question: str) -> str:
     return answer
 
 # ─────────────────────────────────────────────────────────────
-# ENTRY POINT
+# FILE ENTRY
 # ─────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     # 🔧 Change these two lines to use your own PDF and question
     PDF_FILE = r"C:\path\to\your\lecture_notes.pdf"
     QUESTION = "What is Newton's first law of motion?"
     
-    print(f"\n🚀 StudyMind Core — Asking: '{QUESTION}'\n")
+    print(f"\n🚀 Model — Asking: '{QUESTION}'\n")
     result = answer_question_from_pdf(PDF_FILE, QUESTION)
     print(f"\n💡 Answer:\n{result}\n")
